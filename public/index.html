@@ -39,5 +39,27 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDKheFra3au1CcY8N58sJZ6g58IteVNn9M",
+    authDomain: "coffe-queen.firebaseapp.com",
+    databaseURL: "https://coffe-queen.firebaseio.com",
+    projectId: "coffe-queen",
+    storageBucket: "coffe-queen.appspot.com",
+    messagingSenderId: "545706243126",
+    appId: "1:545706243126:web:0fc86562fba0540f46d497"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
   </body>
 </html>
