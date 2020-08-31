@@ -1,25 +1,31 @@
-import React from 'react';
-import logo1 from './img/logo1.png';
-import './App.css';
-import boton from './components/Buttons.jsx';
+import React from "react";
+import "./App.css";
+import Home from "./Views/CoffeeQueen";
+import Enter from "./Views/Selection";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-export default class App extends React.Component {
-  constructor() {
-    super();
-  }
-  
-
-  clickMe() {
-    console.log("click me");
-  }
-
-  render() {
-    return ( < div className = "App" >
-<div className = "App" >
-  <img src={logo1} className="LogoCoffee" alt="Coffee Queen" />
- </div> <button className = "App"onClick = {this.clickMe}> INICIO </button> </div>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/FoodOrders">
+          <Waiter />
+        </Route>
+        <Route path="/Chef">
+          <Food />
+        </Route>
+        <Route path="/Menu">
+          <Enter />
+        </Route>
+        <Route path="/Selection">
+          <Enter />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
-
+export default App;

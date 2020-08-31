@@ -1,12 +1,11 @@
-body{
-    background-color: #DDD0CB;
+body {
+  background-color: #ddd0cb;
 }
 
 .App {
   text-align: center;
-
 }
 
-.click{
+.click {
   justify-items: center;
 }
