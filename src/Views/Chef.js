@@ -1,12 +1,11 @@
 import React from "react";
 
-function Enter() {
+function Food() {
   return (
     <div>
-      <BtnWaiter />
-      <BtnKitchen />
+      <h1>MENU DE COMIDA</h1>
     </div>
   );
 }
 
-export default Enter;
+export default Food;
