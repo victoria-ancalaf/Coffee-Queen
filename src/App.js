@@ -8,6 +8,15 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/FoodOrders">
+          <Waiter />
+        </Route>
+        <Route path="/Chef">
+          <Food />
+        </Route>
+        <Route path="/Menu">
+          <Enter />
+        </Route>
         <Route path="/Selection">
           <Enter />
         </Route>
