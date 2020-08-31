@@ -1,14 +1,21 @@
 import React from "react";
-import Logo from "./components/CoffeeLogo.jsx";
 import "./App.css";
-import Events from "./components/Events.jsx";
+import Home from "./Views/CoffeeQueen";
+import Enter from "./Views/Selection";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Logo />
-      <Events />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/Selection">
+          <Enter />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

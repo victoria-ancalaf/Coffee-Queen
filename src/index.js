@@ -3,12 +3,10 @@ import ReactDOM from "react-dom";
 import "./styles/index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import Enter from "./Selection";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Enter />
   </React.StrictMode>,
   document.getElementById("root")
 );
