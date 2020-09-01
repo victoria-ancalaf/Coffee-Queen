@@ -1,7 +1,10 @@
 import React from "react";
-import "./App.css";
 import Home from "./Views/CoffeeQueen";
 import Enter from "./Views/Selection";
+import Food from "./Views/Chef";
+import Waiter from "./Views/FoodOrders";
+import MenuOptions from "./Views/Menu";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -15,7 +18,7 @@ function App() {
           <Food />
         </Route>
         <Route path="/Menu">
-          <Enter />
+          <MenuOptions />
         </Route>
         <Route path="/Selection">
           <Enter />

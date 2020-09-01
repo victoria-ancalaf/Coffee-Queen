@@ -3,7 +3,7 @@ import React from "react";
 function Waiter() {
   return (
     <div>
-      <h1>ORDENES DE LOS CLIENTES</h1>
+      <h1>ORDENES LISTAS DESDE COCINA</h1>
     </div>
   );
 }

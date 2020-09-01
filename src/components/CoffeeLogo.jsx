@@ -1,11 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Img from "../img/logo1.png";
+import "../styles/EnterApp.css";
 
 function Logo() {
   return (
-    <Fragment>
+    <div className="LogoCoffe">
       <img src={Img} alt="Coffee Queen" />
-    </Fragment>
+    </div>
   );
 }
 

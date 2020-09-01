@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/EnterApp.css";
 
 const Events = () => {
   const eventClick = () => {
@@ -7,12 +8,10 @@ const Events = () => {
   };
 
   return (
-    <div className="container">
-      <div className="btn-group">
+    <div className="BtnEnter">
         <Link to="/Selection">
-          <button onClick={eventClick}>Entrar</button>
+          <button className="NoBtn" onClick={eventClick}>INICIO</button>
         </Link>
-      </div>
     </div>
   );
 };

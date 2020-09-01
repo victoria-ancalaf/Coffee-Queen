@@ -1,11 +1,11 @@
 import React from "react";
-function Enter() {
+
+function MenuOptions() {
   return (
     <div>
-      <BtnWaiter />
-      <BtnKitchen />
+     <h1>MENU COFFEE QUEEEEEEEEEEEEEEEEEEEN</h1>
     </div>
   );
 }
 
-export default Enter;
+export default MenuOptions;

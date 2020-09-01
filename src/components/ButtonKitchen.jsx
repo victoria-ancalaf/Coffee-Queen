@@ -1,5 +1,6 @@
 import React from "react";
 import Bkitchen from "../img/iconos cocinapng.png";
+import { Link } from "react-router-dom";
 
 const BtnKitchen = () => {
   const BtnK = () => {
@@ -8,9 +9,11 @@ const BtnKitchen = () => {
 
   return (
     <div>
+      <Link to="/Chef">
       <button onClick={BtnK}>
         <img src={Bkitchen} alt="Cocina" />
       </button>
+       </Link>
     </div>
   );
 };
