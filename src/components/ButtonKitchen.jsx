@@ -1,5 +1,5 @@
 import React from "react";
-import Bkitchen from "../img/iconos cocinapng.png";
+import Bkitchen from "../img/cocina.png";
 import { Link } from "react-router-dom";
 
 const BtnKitchen = () => {

@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../components/Header";
 
 function Waiter() {
   return (
     <div>
-      <h1>ORDENES LISTAS DESDE COCINA</h1>
+      <Header />
     </div>
   );
 }
