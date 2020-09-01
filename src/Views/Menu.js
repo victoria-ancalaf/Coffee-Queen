@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../components/Header";
 
 function MenuOptions() {
   return (
-    <div>
-     <h1>MENU COFFEE QUEEEEEEEEEEEEEEEEEEEN</h1>
+    <div className="ContainterMenu">
+      <Header />
     </div>
   );
 }

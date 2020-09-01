@@ -1,5 +1,5 @@
 import React from "react";
-import BWaiter from "../img/icono mesera.png";
+import BWaiter from "../img/mesera.png";
 import { Link } from "react-router-dom";
 
 const BtnWaiter = () => {
@@ -9,11 +9,11 @@ const BtnWaiter = () => {
 
   return (
     <Link to="/Menu">
-    <div className="Waiter">
-      <button className="NoWaiter" onClick={BtnW}>
-        <img src={BWaiter} alt="Mesera" />
-      </button>
-    </div>
+      <div className="Waiter">
+        <button className="NoWaiter" onClick={BtnW}>
+          <img src={BWaiter} alt="Mesera" />
+        </button>
+      </div>
     </Link>
   );
 };
