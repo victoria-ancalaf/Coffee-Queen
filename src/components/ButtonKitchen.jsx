@@ -8,13 +8,13 @@ const BtnKitchen = () => {
   };
 
   return (
-    <div>
-      <Link to="/Chef">
-      <button onClick={BtnK}>
+    <Link to="/Chef">
+    <div className="Chef">
+        <button className="NoChef" onClick={BtnK}>
         <img src={Bkitchen} alt="Cocina" />
       </button>
-       </Link>
     </div>
+    </Link>
   );
 };
 
