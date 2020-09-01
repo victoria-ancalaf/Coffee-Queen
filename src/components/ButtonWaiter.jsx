@@ -8,13 +8,13 @@ const BtnWaiter = () => {
   };
 
   return (
-    <div>
-      <Link to="/Menu">
-      <button onClick={BtnW}>
+    <Link to="/Menu">
+    <div className="Waiter">
+      <button className="NoWaiter" onClick={BtnW}>
         <img src={BWaiter} alt="Mesera" />
       </button>
-      </Link>
     </div>
+    </Link>
   );
 };
 
