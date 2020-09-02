@@ -1,1 +1,458 @@
-// Aqui va el menú
+[{
+        "sku": "be01",
+        "name": "Café",
+        "type": "bebida",
+        "price": "",
+        "options": [{
+                "id": "cl01",
+                "name": "Café con leche",
+                "price": 2000
+
+            },
+            {
+                "id": "co02",
+                "name": "Cortado",
+                "price": 1500
+            },
+            {
+                "id": "am03",
+                "name": "Americano",
+                "price": 1000
+            },
+            {
+                "id": "ex04",
+                "name": "Expresso",
+                "price": 700
+
+            }
+
+        ],
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+
+    {
+        "sku": "be02",
+        "name": "Frappuccino",
+        "type": "bebida",
+        "price": "",
+        "options": [{
+                "id": "fr01",
+                "name": "Frambuesa",
+                "price": 2800
+            },
+            {
+                "id": "ch02",
+                "name": "Chocolate",
+                "price": 2800
+            },
+            {
+                "id": "va03",
+                "name": "Vainilla",
+                "price": 2800
+            },
+            {
+                "id": "ma04",
+                "name": "Manjar",
+                "price": 2800
+            }
+        ],
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+
+    {
+        "sku": "be03",
+        "name": "Capuccino",
+        "type": "bebida",
+        "price": "",
+        "options": [{
+                "id": "ch01",
+                "name": "Chocolate",
+                "price": 3000
+
+            },
+            {
+                "id": "ca02",
+                "name": "Canela",
+                "price": 3000
+            },
+            {
+                "id": "van03",
+                "name": "Vainilla",
+                "price": 3000
+            },
+            {
+                "id": "man04",
+                "name": "Manjar",
+                "price": 3000
+
+            }
+
+        ],
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+
+    },
+
+    {
+        "sku": "be04",
+        "name": "Latte",
+        "type": "bebida",
+        "price": "",
+        "options": [{
+                "id": "va01",
+                "name": "Vainilla",
+                "price": 3000
+
+            },
+            {
+                "id": "ma02",
+                "name": "Manjar",
+                "price": 3000
+            },
+            {
+                "id": "ch03",
+                "name": "Chocolate",
+                "price": 3000
+            }
+
+        ],
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+
+    },
+
+    {
+        "sku": "be05",
+        "name": "Submarino",
+        "type": "bebida",
+        "price": "",
+        "options": [{
+            "id": "",
+            "name": "",
+            "price": 2500
+        }],
+        "extras": [{
+                "sku": "ca01",
+                "name": "Canela",
+                "price": 500
+            },
+            {
+                "sku": "cr02",
+                "name": "Crema",
+                "price": 500
+            }
+        ]
+    },
+
+    {
+        "sku": "be06",
+        "name": "Jugo natural",
+        "type": "bebida",
+        "price": "",
+        "options": [{
+                "id": "jn01",
+                "name": "Jugo de naranja",
+                "price": 2000
+            },
+            {
+                "id": "jf02",
+                "name": "Jugo de frutilla",
+                "price": 2000
+            }
+
+        ],
+        "extras": [{
+                "sku": "",
+                "name": "",
+                "price": ""
+            },
+            {
+                "sku": "",
+                "name": "",
+                "price": ""
+            }
+        ]
+    },
+    {
+        "sku": "be07",
+        "name": "Agua",
+        "type": "bebida",
+        "price": "",
+        "options": [{
+                "id": "ag01",
+                "name": "Agua con gas",
+                "price": 1500
+            },
+            {
+                "id": "ag02",
+                "name": "Agua sin gas",
+                "price": 1500
+            }
+        ],
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+    {
+        "sku": "be08",
+        "name": "Té",
+        "type": "bebida",
+        "price": "",
+        "options": [{
+                "id": "te01",
+                "name": "Té negro",
+                "price": 1000
+            },
+            {
+                "id": "te02",
+                "name": "Té verde",
+                "price": 1000
+            },
+            {
+                "id": "te03",
+                "name": "Té rojo",
+                "price": 1000
+            },
+            {
+                "id": "te04",
+                "name": "Té blanco",
+                "price": 1000
+            }
+        ],
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+    {
+        "sku": "pa01",
+        "name": "Tortas",
+        "type": "pasteleria",
+        "price": "",
+        "options": [{
+                "id": "tl01",
+                "name": "Tres leches",
+                "price": 2500
+            },
+            {
+                "id": "ti02",
+                "name": "Tiramisú",
+                "price": 2500
+            },
+            {
+                "id": "che03",
+                "name": "Cheesecake",
+                "price": 2500
+            }
+        ],
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+    {
+        "sku": "pa02",
+        "name": "Galletas",
+        "type": "pasteleria",
+        "price": "",
+        "options": [{
+                "id": "cc01",
+                "name": "Chip de chocolate",
+                "price": 1000
+            },
+            {
+                "id": "va02",
+                "name": "Vainilla",
+                "price": 1000
+            }
+        ],
+
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+    {
+        "sku": "pa03",
+        "name": "Medialunas",
+        "type": "pasteleria",
+        "price": "",
+        "options": [{
+                "id": "ma01",
+                "name": "Manjar",
+                "price": 800
+            },
+            {
+                "id": "me02",
+                "name": "Mermelada",
+                "price": 800
+            }
+        ],
+
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+    {
+        "sku": "pa04",
+        "name": "Donuts",
+        "type": "pastelería",
+        "price": 1000,
+        "options": [{
+                "sku": "re01",
+                "name": "Rellenas",
+                "price": 1000
+            },
+            {
+                "sku": "gl02",
+                "name": "Glaseadas",
+                "price": 1000
+            }
+        ],
+
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+
+
+    },
+    {
+        "sku": "pa05",
+        "name": "Muffin",
+        "type": "pastelería",
+        "price": 800,
+        "options": [{
+                "sku": "rel01",
+                "name": "Rellenas",
+                "price": 1000
+            },
+            {
+                "sku": "vai02",
+                "name": "Vainilla",
+                "price": 1000
+            }
+        ],
+
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+
+    {
+        "sku": "pa06",
+        "name": "Brownie",
+        "type": "pastelería",
+        "price": 1500,
+        "options": [{
+            "sku": "",
+            "name": "",
+            "price": ""
+
+        }],
+        "extras": [{
+                "sku": "he01",
+                "name": "Helado",
+                "price": 500
+            },
+            {
+                "sku": "crm02",
+                "name": "Crema",
+                "price": 500
+            }
+        ]
+    },
+
+    {
+        "sku": "pa07",
+        "name": "Tarta de frutas",
+        "type": "pastelería",
+        "price": 2000,
+        "options": [{
+                "sku": "fru01",
+                "name": "Frutilla",
+                "price": 2000
+            },
+            {
+                "sku": "du02",
+                "name": "Durazno",
+                "price": 2000
+            },
+            {
+                "sku": "maz03",
+                "name": "Manzana",
+                "price": 2000
+            }
+        ],
+
+        "extras": [{
+            "id": "",
+            "name": "",
+            "price": ""
+
+        }]
+    },
+    {
+        "sku": "pa08",
+        "name": "Waffles",
+        "type": "pastelería",
+        "price": 1500,
+        "options": [{
+            "sku": "",
+            "name": "",
+            "price": ""
+
+        }],
+        "extras": [{
+                "sku": "cm01",
+                "name": "Crema",
+                "price": 500
+            },
+            {
+                "sku": "ft02",
+                "name": "Fruta",
+                "price": 500
+            },
+            {
+                "sku": "mj03",
+                "name": "Manjar",
+                "price": 500
+            }
+        ]
+    }
+]
