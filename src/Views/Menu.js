@@ -1,5 +1,8 @@
 import React from "react";
 import Header from "../components/Header";
+import data from "../data/menu.json";
+
+console.log(data)
 
 function MenuOptions() {
   return (

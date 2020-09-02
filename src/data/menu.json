@@ -1,1 +1,68 @@
-// Aqui va el menú
+{
+    "Bebidas": [{
+      "name": "Café Americano",
+      "precio": 1000   
+    }, 
+    {
+      "name": "Café con leche",
+      "precio": 1100
+    }, 
+    {
+      "name": "Cappuccino", 
+      "precio": 3000
+    }, 
+    {
+      "name": "Latte",
+      "precio": 3500
+    }, 
+    {
+      "name": "Submarino",
+      "precio": 2500
+    }, 
+    {
+      "name": "Frappuccino",
+      "precio": 3000
+    }, 
+    {
+      "name": "Expresso",
+      "precio": 1000
+    }, 
+    {
+      "name": "Mochaccino",
+      "precio": 3000
+   
+    }],
+    
+    "Pasteleria": [{
+      "name": "Tortas",
+      "precio": 2500
+    }, 
+    {
+      "name": "Galletas",
+      "precio": 3000
+    }, 
+    {
+      "name": "Medialunas",
+      "precio": 1500
+    }, 
+    {
+      "name": "Donuts",
+      "precio": 4000
+    }, 
+    {
+      "name": "Muffin",
+      "precio": 3000
+    }, 
+    {
+      "name": "Brownie",
+      "precio": 3000
+    }, 
+    {
+      "name": "Tarta de frutas",
+      "precio": 3000
+    }, 
+    {
+      "name": "Waffles",
+      "precio": 700
+    }]
+  }
