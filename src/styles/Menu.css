@@ -1,0 +1,27 @@
+.ContainerMenu {
+  display: flex;
+  flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+.ContainerMenuBottom{
+  margin-top: 4.5%;
+  width: 100%;
+}
+
+.ContainerHeader {
+  width: 100%;
+}
+
+.ContainerButtons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: warp;
+  width: 40%;
+}
+
+.ContainerOrder {
+  width: 60%;
+}
