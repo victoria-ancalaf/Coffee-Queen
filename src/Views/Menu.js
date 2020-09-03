@@ -1,11 +1,10 @@
 import React from "react";
 import Header from "../components/Header";
-import data from "../data/menu.json";
 import Drinks from "../components/Drinks";
 import CakeShop from "../components/CakeShop";
 import "../styles/Menu.css"
+import Products from "../components/Products";
 
-console.log(data);
 
 function MenuOptions() {
   return (
@@ -17,11 +16,13 @@ function MenuOptions() {
         <div className="ContainerButtons">
           <Drinks />
           <CakeShop />
+          <Products />
           </div>
           <div className="ContainerOrder">
           </div>
       </div>
     </div>
+
   );
 }
 
