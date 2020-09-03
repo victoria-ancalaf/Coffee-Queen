@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "../components/Header";
-import Drinks from "../components/Drinks";
-import CakeShop from "../components/CakeShop";
-import "../styles/Menu.css"
+// import Drinks from "../components/Drinks";
+// import CakeShop from "../components/CakeShop";
+import "../styles/Menu.css";
 import Products from "../components/Products";
+
 
 
 function MenuOptions() {
@@ -14,8 +15,6 @@ function MenuOptions() {
       </div>
       <div className="ContainerMenuBottom"> 
         <div className="ContainerButtons">
-          <Drinks />
-          <CakeShop />
           <Products />
           </div>
           <div className="ContainerOrder">

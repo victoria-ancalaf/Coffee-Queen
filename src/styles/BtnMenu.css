@@ -11,21 +11,36 @@
   border:none;
 }
 
-/* .Cake {
-  position: absolute;
-  width: 200px;
-  height: 100px;
-  left: 300px;
-  top: 150px;
-
-  background: #592d1d;
-  border-radius: 10px;
-
-  font-family: "Roboto", sans-serif;
-  font-weight: 'bold';
-  font-size: 30px;
-  line-height: 35px;
-
-  color: #ffffff;
+button:active {
+  background-color: #BF7111;
 }
- */
+
+.optionsButtons {
+width: 200px;
+height: 100px;
+background: #BF7C63;
+border-radius: 15px;
+border:none;
+font-family: "Roboto", sans-serif;
+font-weight: 'bold';
+font-size: 24px;
+line-height: 28px;
+color: #260801;
+margin-top: 8%;
+}
+
+.Cookies {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.MenuButtons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}

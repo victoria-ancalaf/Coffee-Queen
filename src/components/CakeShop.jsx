@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/BtnMenu.css";
 
-const CakeShop = () => {
-  return <button className="Cake">PASTELERIA</button>;
+const CakeShop = (props) => {
+  return <button onClick={props.onClick}className="Cake">PASTELERIA</button>
+
+
 };
 
 export default CakeShop;
