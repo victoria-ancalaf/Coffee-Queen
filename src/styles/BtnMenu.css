@@ -1,22 +1,17 @@
-.btnDrinks {
-  position: absolute;
+.btnDrinks, .Cake{
   width: 200px;
   height: 100px;
-  left: 50px;
-  top: 150px;
-
   background: #592d1d;
   border-radius: 10px;
-
   font-family: "Roboto", sans-serif;
   font-weight: "bold";
   font-size: 30px;
   line-height: 35px;
-
   color: #ffffff;
+  border:none;
 }
 
-.bntCake {
+/* .Cake {
   position: absolute;
   width: 200px;
   height: 100px;
@@ -26,11 +21,11 @@
   background: #592d1d;
   border-radius: 10px;
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-weight: 'bold';
   font-size: 30px;
   line-height: 35px;
 
   color: #ffffff;
 }
+ */
