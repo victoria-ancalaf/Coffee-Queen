@@ -250,7 +250,7 @@
     {
         "sku": "pa01",
         "name": "Tortas",
-        "type": "pasteleria",
+        "type": "pastelería",
         "price": "",
         "options": [{
                 "id": "tl01",
@@ -278,7 +278,7 @@
     {
         "sku": "pa02",
         "name": "Galletas",
-        "type": "pasteleria",
+        "type": "pastelería",
         "price": "",
         "options": [{
                 "id": "cc01",
@@ -302,7 +302,7 @@
     {
         "sku": "pa03",
         "name": "Medialunas",
-        "type": "pasteleria",
+        "type": "pastelería",
         "price": "",
         "options": [{
                 "id": "ma01",
