@@ -1,4 +1,5 @@
-.btnDrinks, .Cake{
+.btnDrinks,
+.Cake {
   width: 200px;
   height: 100px;
   background: #592d1d;
@@ -8,25 +9,25 @@
   font-size: 30px;
   line-height: 35px;
   color: #ffffff;
-  border:none;
+  border: none;
 }
 
 button:active {
-  background-color: #BF7111;
+  background-color: #bf7111;
 }
 
 .optionsButtons {
-width: 200px;
-height: 100px;
-background: #BF7C63;
-border-radius: 15px;
-border:none;
-font-family: "Roboto", sans-serif;
-font-weight: 'bold';
-font-size: 24px;
-line-height: 28px;
-color: #260801;
-margin-top: 8%;
+  width: 200px;
+  height: 100px;
+  background: #bf7c63;
+  border-radius: 15px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: "bold";
+  font-size: 24px;
+  line-height: 28px;
+  color: #260801;
+  margin-top: 8%;
 }
 
 .Cookies {
@@ -42,5 +43,4 @@ margin-top: 8%;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  
 }
