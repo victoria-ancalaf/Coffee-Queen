@@ -7,7 +7,6 @@ const Form = () => {
         waiterName: "",
         tables: "",
     });
-    //console.log(data, setData)
     const handleInputChange = (event) => {
         setData({
             ...data,
