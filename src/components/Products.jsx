@@ -6,24 +6,29 @@ import "../styles/BtnMenu.css";
 
 const Products = () => {
   const MenuBebidas = data.filter((items) => items.type === "bebida");
+  
 
   const MenuPasteleria = data.filter((items) => items.type === "pastelería");
-  /* 
-  let Caffee = data.filter((items) => {items.name});
 
+/*  const caffee = data.options;
+  const Caffee = caffee.filter((items) => items.options === "cl01");
   console.log(Caffee); */
 
   const [options, setOptions] = useState(MenuBebidas);
+  const [order, setOrder] = useState ([]);
+
+
 
   const cakeClick = () => {
     console.log("Hola, traigo ricos Pasteles");
     setOptions(MenuPasteleria);
   };
 
-  const drinkClick = () => {
+  const drinkClick = (Bebestibles) => {
     console.log("Hola, vendo muchos tipos de café");
-    setOptions(MenuBebidas);
+    setOrder([...order, {nombre: Bebestibles.name, precio: Bebestibles.value} ]);
   };
+  
 
   return (
     <div>
@@ -36,7 +41,7 @@ const Products = () => {
       </div>
       <div className="MenuButtons">
         {options.map((item, index) => (
-          <button className="optionsButtons" key={index}>
+          <button name={item.name} value={item.price} onClick={(e) => drinkClick(e.target)} className="optionsButtons" key={index}>
             {item.name} <br></br>${item.price}
           </button>
         ))}
