@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "coffe-queen"
+    "default": "coffe-queen",
+    "coffee-queen": "coffe-queen"
   }
 }

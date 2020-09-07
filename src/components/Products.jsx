@@ -6,27 +6,25 @@ import "../styles/BtnMenu.css";
 
 const Products = () => {
   const MenuBebidas = data.filter((items) => items.type === "bebida");
-  
-
   const MenuPasteleria = data.filter((items) => items.type === "pastelería");
 
-/*  const caffee = data.options;
-  const Caffee = caffee.filter((items) => items.options === "cl01");
-  console.log(Caffee); */
-
+//Estado del pedido
   const [options, setOptions] = useState(MenuBebidas);
   const [order, setOrder] = useState ([]);
+  // const [quantity, setquantity] = useState(1);
 
-
+  const addCart = (menu) => {
+    setOrder([...order, {name: menu.name, price: menu.value, id: menu.sku} ]);
+  }
 
   const cakeClick = () => {
     console.log("Hola, traigo ricos Pasteles");
     setOptions(MenuPasteleria);
   };
 
-  const drinkClick = (Bebestibles) => {
+  const drinkClick = () => {
     console.log("Hola, vendo muchos tipos de café");
-    setOrder([...order, {nombre: Bebestibles.name, precio: Bebestibles.value} ]);
+    setOptions(MenuBebidas);
   };
   
 
@@ -41,11 +39,16 @@ const Products = () => {
       </div>
       <div className="MenuButtons">
         {options.map((item, index) => (
-          <button name={item.name} value={item.price} onClick={(e) => drinkClick(e.target)} className="optionsButtons" key={index}>
+          <button name={item.name} value={item.price} onClick={(e) => addCart(e.target)} className="optionsButtons" key={index}>
             {item.name} <br></br>${item.price}
           </button>
         ))}
-      </div>
+    </div>
+    <div className="DIVPRUEBA">
+        {order.map(item => (
+          <div key={item.sku}> {item.name} {item.price}</div>
+            ))}
+        </div>
     </div>
   );
 };

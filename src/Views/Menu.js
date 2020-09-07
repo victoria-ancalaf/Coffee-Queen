@@ -16,7 +16,7 @@ function MenuOptions() {
         </div>
         <div className="ContainerOrder">
           <ShoppingCart />
-        </div>
+        </div> 
       </div>
     </div>
   );

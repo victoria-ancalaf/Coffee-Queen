@@ -4,6 +4,7 @@ import Form from "../components/Form";
 import ButtonsCancel from "../components/ButtonsCancel";
 import ButtonSend from "../components/ButtonSend";
 import ButtonsOrder from "../components/ButtonsOrder";
+/* import AddCart from "../components/AddCart" */
 
 const ShoppingCart = () => {
   return (
@@ -17,17 +18,7 @@ const ShoppingCart = () => {
         <p>PRECIO</p>
       </div>
       <div className="ListProducts">
-        Lista de productos
-        <br></br>
-        Lista de productos
-        <br></br>
-        Lista de productos
-        <br></br>
-        Lista de productos
-        <br></br>
-        Lista de productos
-        <br></br>
-        Lista de productos
+  {/*     <AddCart /> */}
       </div>
       <div className="StylesTitle">
         <p>TOTAL</p>
