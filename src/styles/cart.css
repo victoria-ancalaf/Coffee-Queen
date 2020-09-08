@@ -90,3 +90,15 @@ p {
 .ListProducts {
   height: 40%;
 }
+
+.btn-transh > img {
+    width: 4%;
+    color:#260801;
+}
+
+.Hola {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

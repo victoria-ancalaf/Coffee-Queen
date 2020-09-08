@@ -3,18 +3,23 @@ import data from "../data/menu.json";
 import Drinks from "../components/Drinks";
 import CakeShop from "../components/CakeShop";
 import "../styles/BtnMenu.css";
+import { firebase } from '../firebase'
 
-const Products = () => {
+const db = firebase.firestore();
+console.log(db);
+
+const Products = (props) => {
+  const {order, handleSetOrder} = props;
   const MenuBebidas = data.filter((items) => items.type === "bebida");
   const MenuPasteleria = data.filter((items) => items.type === "pastelería");
 
 //Estado del pedido
   const [options, setOptions] = useState(MenuBebidas);
-  const [order, setOrder] = useState ([]);
   // const [quantity, setquantity] = useState(1);
 
   const addCart = (menu) => {
-    setOrder([...order, {name: menu.name, price: menu.value, id: menu.sku} ]);
+    const newOrder = ([...order, {name: menu.name, price: menu.value, id: menu.sku} ]);
+    handleSetOrder(newOrder)
   }
 
   const cakeClick = () => {
@@ -44,11 +49,7 @@ const Products = () => {
           </button>
         ))}
     </div>
-    <div className="DIVPRUEBA">
-        {order.map(item => (
-          <div key={item.sku}> {item.name} {item.price}</div>
-            ))}
-        </div>
+     
     </div>
   );
 };
