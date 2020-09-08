@@ -1,16 +1,16 @@
 import React from "react";
 import "../styles/cart.css";
-/* import Form from "../components/Form"; */
+import Form from "../components/Form";
 import ButtonsCancel from "../components/ButtonsCancel";
 import ButtonSend from "../components/ButtonSend";
 import ButtonsOrder from "../components/ButtonsOrder";
-import Trash from "../components/Trash"
+import Trash from "../components/Trash";
 
-const ShoppingCart = ({order}) => {
+const ShoppingCart = ({ order }) => {
   return (
     <div className="containerCart">
       <div className="Tables">
-      {/*   <Form /> */}
+        <Form />
       </div>
       <div className="StylesTitle">
         <p>PRODUCTOS</p>
@@ -18,14 +18,14 @@ const ShoppingCart = ({order}) => {
         <p>PRECIO</p>
       </div>
       <div className="ListProducts">
-        {order.map((item, index) => 
-        <div className="Hola" key={index}>
-        <div className="products">{item.name}</div>
-        <div className="quantity"></div>
-        <div className="price"> ${item.price}</div>
-        <div><Trash key={'hola' + index} /></div>
-         </div>
-        )}
+        {order.map((item, index) => (
+          <div className="Hola" key={index}>
+            <div className="cartProducts">{item.name}</div>
+            <div className="cartProducts">{item.quantity}</div>
+            <div className="cartProducts">${item.price}</div>
+            <Trash key={"hola" + index} />
+          </div>
+        ))}
       </div>
       <div className="StylesTitle">
         <p>TOTAL</p>

@@ -3,24 +3,34 @@ import data from "../data/menu.json";
 import Drinks from "../components/Drinks";
 import CakeShop from "../components/CakeShop";
 import "../styles/BtnMenu.css";
-import { firebase } from '../firebase'
+import { firebase } from "../firebase";
 
 const db = firebase.firestore();
 console.log(db);
 
 const Products = (props) => {
-  const {order, handleSetOrder} = props;
+  const { order, handleSetOrder } = props;
   const MenuBebidas = data.filter((items) => items.type === "bebida");
   const MenuPasteleria = data.filter((items) => items.type === "pastelería");
 
-//Estado del pedido
+  //Estado del pedido
   const [options, setOptions] = useState(MenuBebidas);
   // const [quantity, setquantity] = useState(1);
 
   const addCart = (menu) => {
-    const newOrder = ([...order, {name: menu.name, price: menu.value, id: menu.sku} ]);
-    handleSetOrder(newOrder)
-  }
+    console.log(menu);
+    //Revisar NewOrder y ver si el item existe, y si existe añadirle 1 al quantity
+    const newOrder = [
+      ...order,
+      {
+        name: menu.name,
+        price: menu.price,
+        quantity: menu.quantity,
+        id: menu.sku,
+      },
+    ];
+    handleSetOrder(newOrder);
+  };
 
   const cakeClick = () => {
     console.log("Hola, traigo ricos Pasteles");
@@ -31,7 +41,6 @@ const Products = (props) => {
     console.log("Hola, vendo muchos tipos de café");
     setOptions(MenuBebidas);
   };
-  
 
   return (
     <div>
@@ -44,12 +53,18 @@ const Products = (props) => {
       </div>
       <div className="MenuButtons">
         {options.map((item, index) => (
-          <button name={item.name} value={item.price} onClick={(e) => addCart(e.target)} className="optionsButtons" key={index}>
+          <button
+            number={item.quantity}
+            name={item.name}
+            value={item.price}
+            onClick={() => addCart(item)}
+            className="optionsButtons"
+            key={index}
+          >
             {item.name} <br></br>${item.price}
           </button>
         ))}
-    </div>
-     
+      </div>
     </div>
   );
 };

@@ -47,10 +47,8 @@ p {
   width: 188px;
   height: 99px;
   border: none;
-
   background: #bf7111;
   border-radius: 10px;
-
   font-family: "Roboto", sans-serif;
   font-weight: BOLD;
   font-size: 20px;
@@ -88,17 +86,33 @@ p {
 }
 
 .ListProducts {
-  height: 40%;
+  height: 250px;
+  width: 100%;
 }
 
 .btn-transh > img {
-    width: 4%;
-    color:#260801;
+  width: 10%;
+  color: #260801;
 }
 
 .Hola {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  line-height: 23px;
+  color: #592d1d;
+  font-weight: bold;
+}
+
+.cartProducts {
+  width: 550px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: center;
 }
