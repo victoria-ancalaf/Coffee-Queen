@@ -1,14 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import "../styles/Menu.css";
 import Products from "../components/Products";
 import ShoppingCart from "../components/ShoppingCart";
 
 function MenuOptions() {
-  const [order, setOrder] = useState ([]);
+  const [order, setOrder] = useState([]);
   const handleSetOrder = (order) => {
-  setOrder(order)
-  }
+    setOrder(order);
+  };
+  const handleDelete = (order) => {
+    setOrder(order);
+  };
 
   return (
     <div className="ContainerMenu">
@@ -17,11 +20,15 @@ function MenuOptions() {
       </div>
       <div className="ContainerMenuBottom">
         <div className="ContainerButtons">
-          <Products order={order} handleSetOrder={handleSetOrder}/>
+          <Products order={order} handleSetOrder={handleSetOrder} />
         </div>
         <div className="ContainerOrder">
-          <ShoppingCart order={order} handleSetOrder={handleSetOrder}/>
-        </div> 
+          <ShoppingCart
+            order={order}
+            handleSetOrder={handleSetOrder}
+            handleDelete={handleDelete}
+          />
+        </div>
       </div>
     </div>
   );
