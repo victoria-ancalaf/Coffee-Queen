@@ -1,7 +1,6 @@
 .containerCart {
   width: 630px;
   height: 675px;
-
   background: #c7a79b;
   border-radius: 5px;
 }
@@ -17,11 +16,10 @@
   font-weight: "bold";
   font-size: 20px;
   line-height: 23px;
-
   color: #ddd0cb;
-
   background: #592d1d;
 }
+
 p {
   margin: 0%;
 }
@@ -31,14 +29,11 @@ p {
   height: 49px;
   border: none;
   margin-top: 5%;
-
   font-family: "Roboto", sans-serif;
   font-weight: "bold";
   font-size: 20px;
   line-height: 23px;
-
   color: #260801;
-
   background: #bf7c63;
   border-radius: 10px;
 }
@@ -53,7 +48,6 @@ p {
   font-weight: BOLD;
   font-size: 20px;
   line-height: 23px;
-
   color: #ffffff;
 }
 
@@ -78,16 +72,17 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-end;
-  height: 30%;
+  height: 20%;
 }
 
 .Tables {
-  height: 10%;
+  height: 16%;
 }
 
 .ListProducts {
-  height: 250px;
+  height: 300px;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .btn-transh {
@@ -126,4 +121,28 @@ p {
   flex-direction: column;
   flex-wrap: nowrap;
   text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  padding-top: 5%;
+}
+
+.client {
+  margin-right: 15px;
+  font-size: 25px;
+  background-color: #bf7c63;
+  border: none;
+  border-radius: 15px;
+}
+
+.NumberTable {
+  width: 180px;
+  height: 36px;
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: #592d1d;
 }
