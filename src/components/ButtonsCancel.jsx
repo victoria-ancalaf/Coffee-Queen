@@ -8,5 +8,4 @@ const ButtonsCancel = (props) => {
     </button>
   );
 };
-
 export default ButtonsCancel;

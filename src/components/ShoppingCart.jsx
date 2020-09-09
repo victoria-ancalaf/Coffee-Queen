@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/cart.css";
 import Form from "../components/Form";
 import ButtonsCancel from "../components/ButtonsCancel";
@@ -6,11 +6,13 @@ import ButtonSend from "../components/ButtonSend";
 import ButtonsOrder from "../components/ButtonsOrder";
 import Trash from "../components/Trash";
 import { firebase } from "../firebase";
+import { Link } from "react-router-dom";
 
 const db = firebase.firestore();
-console.log(db);
+//console.log(db);
 
 const ShoppingCart = ({ order, handleDelete }) => {
+  const [parentState, setParentState] = useState([]);
   //Elimar items
   const deleteCart = (id) => {
     console.log(id);
@@ -21,9 +23,9 @@ const ShoppingCart = ({ order, handleDelete }) => {
 
   //Sumar el total de los items
   const calcular = order.map((item) => Math.floor(item.price));
-  console.log(calcular);
+  //console.log(calcular);
   const Add = calcular.reduce((a, b) => a + b, 0);
-  console.log(Add);
+  //console.log(Add);
 
   //Cancelar pedido
   const deleteOrder = (id) => {
@@ -32,13 +34,12 @@ const ShoppingCart = ({ order, handleDelete }) => {
   };
 
   //Subir pedido a Firebase
-  const SendOrder = (item) => {
+  const SendOrder = () => {
+    const clientOrder = order.map((item) => item.name);
+    console.log(clientOrder);
     db.collection("orders")
       .add({
-        product: item.name,
-        price: item.price,
-        id: item.sku,
-        total: Add,
+        product: clientOrder,
       })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -51,7 +52,7 @@ const ShoppingCart = ({ order, handleDelete }) => {
   return (
     <div className="containerCart">
       <div className="Tables">
-        <Form />
+        <Form setParentState={setParentState} parentState={parentState} />
       </div>
       <div className="StylesTitle">
         <p>PRODUCTOS</p>
@@ -76,7 +77,9 @@ const ShoppingCart = ({ order, handleDelete }) => {
       <div className="ContainerBtnCart">
         <div className="BtnTwo">
           <ButtonsCancel onClick={() => deleteOrder()} />
-          <ButtonsOrder />
+          <Link to="/FoodOrders">
+            <ButtonsOrder />
+          </Link>
         </div>
         <div className="BtnThree">
           <ButtonSend onClick={() => SendOrder()} />

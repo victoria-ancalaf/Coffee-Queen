@@ -122,3 +122,27 @@ p {
   flex-wrap: nowrap;
   text-align: center;
 }
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  padding-top: 5%;
+}
+
+.client {
+  margin-right: 15px;
+  font-size: 25px;
+  background-color: #bf7c63;
+  border: none;
+  border-radius: 15px;
+}
+
+.NumberTable {
+  width: 180px;
+  height: 36px;
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: #592d1d;
+}
