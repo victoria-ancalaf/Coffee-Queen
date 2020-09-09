@@ -6,7 +6,14 @@ import ButtonSend from "../components/ButtonSend";
 import ButtonsOrder from "../components/ButtonsOrder";
 import Trash from "../components/Trash";
 
-const ShoppingCart = ({ order }) => {
+const ShoppingCart = ({ order, handleDelete }) => {
+  const deleteCart = (id) => {
+    console.log(id);
+    const filterProduct = order.filter((item) => item.id !== id);
+    handleDelete(filterProduct);
+    console.log(filterProduct);
+  };
+
   return (
     <div className="containerCart">
       <div className="Tables">
@@ -23,7 +30,7 @@ const ShoppingCart = ({ order }) => {
             <div className="cartProducts">{item.name}</div>
             <div className="cartProducts">{item.quantity}</div>
             <div className="cartProducts">${item.price}</div>
-            <Trash key={"hola" + index} />
+            <Trash onClick={() => deleteCart(item.id)} key={"hola" + index} />
           </div>
         ))}
       </div>

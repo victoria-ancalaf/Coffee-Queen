@@ -12,10 +12,6 @@
   border: none;
 }
 
-button:active {
-  background-color: #bf7111;
-}
-
 .optionsButtons {
   width: 200px;
   height: 100px;

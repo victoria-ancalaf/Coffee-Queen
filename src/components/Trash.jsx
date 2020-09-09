@@ -1,12 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
+
 import React from "react";
 import TrashCan from "../img/basura.png";
 
-const Trash = () => {
+const Trash = (props) => {
   return (
-    <div className="btn-transh">
+    <button onClick={props.onClick} className="btn-transh">
       <img src={TrashCan} />
-    </div>
+    </button>
   );
 };
 

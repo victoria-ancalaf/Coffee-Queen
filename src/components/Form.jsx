@@ -4,8 +4,8 @@ import { useRef } from "react";
 const Form = ({ setParentState, parentState }) => {
   const selector = useRef(null);
   const [state, setState] = React.useState({
-    cliente: "",
-    mesa: "",
+    /*     cliente: "",
+    mesa: "", */
   });
 
   const handleChange = ({ target: { value, name } }) => {
@@ -17,7 +17,7 @@ const Form = ({ setParentState, parentState }) => {
 
   const submit = (evt) => {
     evt.preventDefault();
-    setParentState([...parentState, state]);
+    setParentState([parentState, state]);
     setState({
       cliente: "",
       mesa: "",
