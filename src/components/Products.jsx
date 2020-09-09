@@ -3,10 +3,6 @@ import data from "../data/menu.json";
 import Drinks from "../components/Drinks";
 import CakeShop from "../components/CakeShop";
 import "../styles/BtnMenu.css";
-import { firebase } from "../firebase";
-
-const db = firebase.firestore();
-console.log(db);
 
 const Products = (props) => {
   const { order, handleSetOrder } = props;
