@@ -90,9 +90,20 @@ p {
   width: 100%;
 }
 
+.btn-transh {
+  background: none;
+  border: none;
+  box-shadow: none !important;
+}
+
+.btn-transh:focus {
+  outline: 0;
+}
+
 .btn-transh > img {
   width: 10%;
-  color: #260801;
+  border: none;
+  box-shadow: none !important;
 }
 
 .Hola {
