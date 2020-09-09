@@ -1,10 +1,16 @@
 import React from "react";
 import Header from "../components/Header";
+import OrderCheck from "../components/OrderCheck";
 
 function Waiter() {
   return (
-    <div>
-      <Header />
+    <div className="containerCheck">
+      <div className="headerCheck">
+        <Header />
+      </div>
+      <div className="checkBottom">
+        <OrderCheck />
+      </div>
     </div>
   );
 }
