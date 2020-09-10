@@ -1,8 +1,24 @@
 import React from "react";
 import DataView from "../components/DataView";
 import "../styles/kitchen.css";
+import { firebase } from "../firebase";
+
+const db = firebase.firestore();
+console.log(db)
 
 const PrepareOrders = () => {
+
+  // db.collection("orders").where("product")
+  //   .onSnapshot(function(querySnapshot) {
+  //       var orderList = [];
+  //       querySnapshot.forEach(function(doc) {
+  //         orderList.push(doc.data().name);
+  //       });
+  //       console.log("Current cities in CA: ", orderList.join(", "));
+  //   });
+  
+  
+
   return (
     <div className="CardOrder">
       <div className="CardLeft">

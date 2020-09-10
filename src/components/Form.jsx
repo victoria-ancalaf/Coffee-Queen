@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import check from "../img/check.png";
+import "../styles/cart.css"
 
 const Form = ({ setParentState, parentState }) => {
   const selector = useRef(null);
@@ -10,7 +12,7 @@ const Form = ({ setParentState, parentState }) => {
     console.log(value)
     console.log(name)
     setState({
-      ...state,
+      state,
       cliente: value,
     });
   };
@@ -27,14 +29,15 @@ const Form = ({ setParentState, parentState }) => {
 
 
   return (
-    <div className="form">
-    <form onSubmit={submit}>
-      <input
+    <div >
+    <form className="form" onSubmit={submit}>
+      <input className="client"
         type="text"
+        placeholder="Nombre del cliente"
         name="cliente"
         onChange={handleChange}
       />
-      <select ref={selector} name="mesa" id="" onChange={handleChange}>
+      <select className="NumberTable" ref={selector} name="mesa" id="" onChange={handleChange}>
         <option value="0">N° de mesa</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -42,8 +45,8 @@ const Form = ({ setParentState, parentState }) => {
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <div className="button-form">
-        {/*      <button type="submit">Enviar Pedido</button> */}
+      <div className="boton">
+        <button className="button-form" type="submit"><img src={check} alt="Check" /></button>
       </div>
     </form>
   </div>
