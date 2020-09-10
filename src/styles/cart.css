@@ -30,7 +30,7 @@ p {
   border: none;
   margin-top: 5%;
   font-family: "Roboto", sans-serif;
-  font-weight: "bold";
+  font-weight: bold;
   font-size: 20px;
   line-height: 23px;
   color: #260801;
@@ -45,7 +45,7 @@ p {
   background: #bf7111;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
-  font-weight: BOLD;
+  font-weight: bold;
   font-size: 20px;
   line-height: 23px;
   color: #ffffff;
@@ -128,6 +128,7 @@ p {
   justify-content: center;
   align-content: flex-end;
   padding-top: 5%;
+
 }
 
 .client {
@@ -136,6 +137,14 @@ p {
   background-color: #bf7c63;
   border: none;
   border-radius: 15px;
+ 
+}
+
+::placeholder {
+  color:#592d1d;
+  font-size: 1.0em;
+  font-family: "Roboto",
+  sans-serif;
 }
 
 .NumberTable {
@@ -145,4 +154,11 @@ p {
   font-family: "Roboto", sans-serif;
   color: #ffffff;
   background-color: #592d1d;
+}
+
+.button-form > img{
+width: 50px;
+height: 50px;
+  background: none;
+  border: none;
 }
