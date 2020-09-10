@@ -7,7 +7,7 @@ import ButtonsOrder from "../components/ButtonsOrder";
 import Trash from "../components/Trash";
 import { firebase } from "../firebase";
 import { Link } from "react-router-dom";
-import DataView from "../components/DataView"
+// import DataView from "../components/DataView"
 
 const db = firebase.firestore();
 //console.log(db);
@@ -54,7 +54,7 @@ const ShoppingCart = ({ order, handleDelete }) => {
     <div className="containerCart">
       <div className="Tables">
       <Form />
-      <DataView />
+      {/* <DataView /> */}
       </div>
       <div className="StylesTitle">
         <p>PRODUCTOS</p>

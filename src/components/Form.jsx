@@ -29,8 +29,8 @@ const Form = ({ setParentState, parentState }) => {
 
 
   return (
-    <div className="form">
-    <form onSubmit={submit}>
+    <div >
+    <form className="form" onSubmit={submit}>
       <input className="client"
         type="text"
         placeholder="Nombre del cliente"
@@ -45,7 +45,7 @@ const Form = ({ setParentState, parentState }) => {
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <div >
+      <div className="boton">
         <button className="button-form" type="submit"><img src={check} alt="Check" /></button>
       </div>
     </form>

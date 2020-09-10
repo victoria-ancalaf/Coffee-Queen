@@ -2,7 +2,7 @@ import React from "react";
 
 const DataView = ({ parentState }) => {
   return (
-    <ol>
+    <div>
       {Array.isArray(parentState) &&
         parentState.length >= 0 &&
         parentState.map(({ cliente, mesa }) => (
@@ -14,7 +14,7 @@ const DataView = ({ parentState }) => {
             </p>
           </li>
         ))}
-    </ol>
+    </div>
   );
 };
 
