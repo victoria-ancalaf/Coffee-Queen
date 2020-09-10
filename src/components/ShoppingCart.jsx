@@ -1,19 +1,17 @@
 import React from "react";
 import "../styles/cart.css";
-import Form from "../components/Form";
 import ButtonsCancel from "../components/ButtonsCancel";
 import ButtonSend from "../components/ButtonSend";
 import ButtonsOrder from "../components/ButtonsOrder";
 import Trash from "../components/Trash";
 import { firebase } from "../firebase";
 import { Link } from "react-router-dom";
-// import DataView from "../components/DataView"
+import check from "../img/check.png";
 
 const db = firebase.firestore();
 //console.log(db);
 
 const ShoppingCart = ({ order, handleDelete }) => {
-
   //Elimar items
   const deleteCart = (id) => {
     console.log(id);
@@ -50,11 +48,55 @@ const ShoppingCart = ({ order, handleDelete }) => {
       });
   };
 
+  const [cooking, setCooking] = React.useState([]);
+  const [client, setClient] = React.useState("");
+
+  React.useEffect(() => {
+    const readOrders = async () => {
+      try {
+        const db = firebase.firestore();
+        const data = await db.collection("orders").get();
+        const arrayData = data.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log(arrayData);
+        setCooking(arrayData);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    readOrders();
+  }, []);
+
+  const oki = async (e) => {
+    e.preventDefault();
+
+    if (!client.trim()) {
+      console.log("No hay cliente");
+      return;
+    }
+    console.log(client);
+  };
+
   return (
     <div className="containerCart">
       <div className="Tables">
-      <Form />
-      {/* <DataView /> */}
+        <form className="form" onSubmit={oki}>
+          <input
+            className="client"
+            type="text"
+            placeholder="Nombre del cliente"
+            name="cliente"
+            onChange={(e) => setClient(e.target.value)}
+            value={client}
+          />
+          <div className="boton">
+            <button className="button-form" type="submit">
+              <img src={check} alt="Check" />
+            </button>
+          </div>
+        </form>
       </div>
       <div className="StylesTitle">
         <p>PRODUCTOS</p>
@@ -65,7 +107,6 @@ const ShoppingCart = ({ order, handleDelete }) => {
         {order.map((item, index) => (
           <div className="Hola" key={index}>
             <div className="cartProducts">{item.name}</div>
-            {/*             <div className="cartProducts">{item.quantity}</div> */}
             <div className="cartProducts">${item.price}</div>
             <Trash onClick={() => deleteCart(item.id)} key={"hola" + index} />
           </div>
@@ -73,7 +114,6 @@ const ShoppingCart = ({ order, handleDelete }) => {
       </div>
       <div className="StylesTitle">
         <p>TOTAL</p>
-        {/*         <p>00</p> */}
         <p>${Add}</p>
       </div>
       <div className="ContainerBtnCart">
@@ -85,6 +125,11 @@ const ShoppingCart = ({ order, handleDelete }) => {
         </div>
         <div className="BtnThree">
           <ButtonSend onClick={() => SendOrder()} />
+        </div>
+        <div className="DIVPRUEBA">
+          {cooking.map((item) => (
+            <div key={item.id}> {item.product}</div>
+          ))}
         </div>
       </div>
     </div>
