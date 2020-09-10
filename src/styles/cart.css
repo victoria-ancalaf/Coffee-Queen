@@ -76,7 +76,7 @@ p {
 }
 
 .Tables {
-  height: 16%;
+  height: 20%;
 }
 
 .ListProducts {
@@ -128,7 +128,6 @@ p {
   justify-content: center;
   align-content: flex-end;
   padding-top: 5%;
-
 }
 
 .client {
@@ -137,35 +136,50 @@ p {
   background-color: #bf7c63;
   border: none;
   border-radius: 15px;
- 
+}
+
+.client2 {
+  margin-right: 15px;
+  font-size: 25px;
+  background-color: #bf7c63;
+  border: none;
+  border-radius: 15px;
+  width: 27%;
 }
 
 ::placeholder {
-  color:#592d1d;
-  font-size: 1.0em;
-  font-family: "Roboto",
-  sans-serif;
+  color: #592d1d;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
 }
 
 .NumberTable {
-  width: 180px;
-  height: 36px;
-  font-size: 19px;
+  width: 181px;
+  height: 53px;
+  font-size: 24px;
   font-family: "Roboto", sans-serif;
   color: #ffffff;
+  border-radius: 15px;
   background-color: #592d1d;
 }
 
-.button-form > img{
-width: 50px;
-height: 50px;
+option {
+  font-size: 12px;
+  height: 30px;
+  padding: 5px;
+  width: 250px;
+}
+
+.button-form > img {
+  width: 50px;
+  height: 50px;
   border: none;
   box-shadow: none !important;
 }
 
-.button-form{
-    background: none;
-    border: none;
+.button-form {
+  background: none;
+  border: none;
 }
 
 .button-form:focus {
