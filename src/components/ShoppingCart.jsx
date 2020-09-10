@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/cart.css";
 import Form from "../components/Form";
 import ButtonsCancel from "../components/ButtonsCancel";
@@ -12,7 +12,7 @@ const db = firebase.firestore();
 //console.log(db);
 
 const ShoppingCart = ({ order, handleDelete }) => {
-  const [parentState, setParentState] = useState([]);
+
   //Elimar items
   const deleteCart = (id) => {
     console.log(id);
@@ -52,7 +52,7 @@ const ShoppingCart = ({ order, handleDelete }) => {
   return (
     <div className="containerCart">
       <div className="Tables">
-        <Form setParentState={setParentState} parentState={parentState} />
+      <Form />
       </div>
       <div className="StylesTitle">
         <p>PRODUCTOS</p>
