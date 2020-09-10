@@ -7,9 +7,11 @@ const Form = ({ setParentState, parentState }) => {
     mesa: "",
   });
   const handleChange = ({ target: { value, name } }) => {
+    console.log(value)
+    console.log(name)
     setState({
       ...state,
-      [name]: value,
+      cliente: value,
     });
   };
 
@@ -22,38 +24,29 @@ const Form = ({ setParentState, parentState }) => {
     });
     selector.current.selectedIndex = 0;
   };
-  const FormView = ({ handleChange, submit, cliente, selector }) => (
-    <div className="form">
-      <form onSubmit={submit}>
-        <input
-          value={cliente}
-          type="text"
-          name="cliente"
-          onChange={handleChange}
-        />
-        <select ref={selector} name="mesa" id="" onChange={handleChange}>
-          <option value="0">N° de mesa</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <div className="button-form">
-          {/*      <button type="submit">Enviar Pedido</button> */}
-        </div>
-      </form>
-    </div>
-  );
+
 
   return (
-    <FormView
-      handleChange={handleChange}
-      submit={submit}
-      cliente={state.cliente}
-      mesa={state.mesa}
-      selector={selector}
-    />
+    <div className="form">
+    <form onSubmit={submit}>
+      <input
+        type="text"
+        name="cliente"
+        onChange={handleChange}
+      />
+      <select ref={selector} name="mesa" id="" onChange={handleChange}>
+        <option value="0">N° de mesa</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <div className="button-form">
+        {/*      <button type="submit">Enviar Pedido</button> */}
+      </div>
+    </form>
+  </div>
   );
 };
 
