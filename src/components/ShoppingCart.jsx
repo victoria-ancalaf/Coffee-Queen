@@ -12,13 +12,13 @@ const db = firebase.firestore();
 //console.log(db);
 
 const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
-  //Elimar items
-  const deleteCart = (id) => {
+  //Eliminar items
+  function deleteCart(id) {
     console.log(id);
     const filterProduct = order.filter((item) => item.id !== id);
     handleDelete(filterProduct);
     console.log(filterProduct);
-  };
+  }
 
   //Sumar el total de los items
   const calcular = order.map((item) => Math.floor(item.price));
@@ -36,11 +36,13 @@ const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
   const SendOrder = () => {
     const clientOrder = order.map((item) => item.name);
     console.log(clientOrder);
+    const dateOrder = new Date();
     db.collection("orders")
 
       .add({
         product: clientOrder,
-  
+        date: dateOrder.toLocaleString(),
+        status: "En espera",
       })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -50,7 +52,6 @@ const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
       });
   };
 
- 
   const [client, setClient] = React.useState("");
 
   // React.useEffect(() => {
@@ -78,22 +79,18 @@ const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
       console.log("No hay cliente");
       return;
     }
-    try { 
-      const db = firebase.firestore()
+    try {
+      const db = firebase.firestore();
       const newUser = {
         name: client,
-        fecha: Date.now()
-      }
-      const data = await db.collection('users').add(newUser)
+        fecha: Date.now(),
+      };
+      const data = await db.collection("users").add(newUser);
 
-      setClient ([
-        ...client,
-        {...newUser, id: data.id}
-      ])
-      setClient('')
-    }
-    catch (error){
-      console.log(error)
+      setClient([...client, { ...newUser, id: data.id }]);
+      setClient("");
+    } catch (error) {
+      console.log(error);
     }
 
     console.log(client);
@@ -146,7 +143,7 @@ const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
         <div className="BtnThree">
           <ButtonSend onClick={() => SendOrder()} />
         </div>
-{/*         <div className="DIVPRUEBA">
+        {/*         <div className="DIVPRUEBA">
           {cooking.map((item) => (
             <div key={item.id}> {item.product}</div>
           ))}
