@@ -8,6 +8,11 @@ import MenuOptions from "./Views/Menu";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  const [cooking, setCooking] = React.useState([]);
+  const handleSetCooking = (cooking) => {
+    setCooking(cooking);
+  };
+
   return (
     <Router>
       <Switch>
@@ -15,10 +20,10 @@ function App() {
           <Waiter />
         </Route>
         <Route path="/Chef">
-          <Food />
+          <Food cooking={cooking} handleSetCooking={handleSetCooking} />
         </Route>
         <Route path="/Menu">
-          <MenuOptions />
+          <MenuOptions cooking={cooking} handleSetCooking={handleSetCooking} />
         </Route>
         <Route path="/Selection">
           <Enter />

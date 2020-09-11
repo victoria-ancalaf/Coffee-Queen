@@ -1,5 +1,4 @@
 import React from "react";
-import DataView from "../components/DataView";
 import "../styles/kitchen.css";
 import { firebase } from "../firebase";
 
@@ -8,24 +7,20 @@ console.log(db)
 
 const PrepareOrders = () => {
 
-  // db.collection("orders").where("product")
-  //   .onSnapshot(function(querySnapshot) {
-  //       var orderList = [];
-  //       querySnapshot.forEach(function(doc) {
-  //         orderList.push(doc.data().name);
-  //       });
-  //       console.log("Current cities in CA: ", orderList.join(", "));
-  //   });
-  
-  
+
+ 
 
   return (
     <div className="CardOrder">
       <div className="CardLeft">
-        <div className="TableClient">
-          <DataView />
+        <div className="TableClient"> 
         </div>
         <div className="TitleProduct">PRODUCTOS</div>
+        {/* <div className="DIVPRUEBA">
+          {cooking.map((item) => (
+            <div key={item.id}> {item.product}</div>
+          ))}
+        </div> */}
       </div>
       <div className="CardRight">
         <div className="chefLe">Hora de ingreso: 20:59</div>
