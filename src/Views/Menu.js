@@ -4,7 +4,8 @@ import "../styles/Menu.css";
 import Products from "../components/Products";
 import ShoppingCart from "../components/ShoppingCart";
 
-function MenuOptions() {
+function MenuOptions(props) {
+  const {cooking, handleSetCooking} = props;
   const [order, setOrder] = useState([]);
   const handleSetOrder = (order) => {
     setOrder(order);
@@ -27,6 +28,7 @@ function MenuOptions() {
             order={order}
             handleSetOrder={handleSetOrder}
             handleDelete={handleDelete}
+            cooking={cooking} handleSetCooking={handleSetCooking}
           />
         </div>
       </div>

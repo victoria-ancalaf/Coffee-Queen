@@ -11,7 +11,7 @@ import check from "../img/check.png";
 const db = firebase.firestore();
 //console.log(db);
 
-const ShoppingCart = ({ order, handleDelete }) => {
+const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
   //Elimar items
   const deleteCart = (id) => {
     console.log(id);
@@ -37,8 +37,10 @@ const ShoppingCart = ({ order, handleDelete }) => {
     const clientOrder = order.map((item) => item.name);
     console.log(clientOrder);
     db.collection("orders")
+
       .add({
         product: clientOrder,
+  
       })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -48,26 +50,26 @@ const ShoppingCart = ({ order, handleDelete }) => {
       });
   };
 
-  const [cooking, setCooking] = React.useState([]);
+ 
   const [client, setClient] = React.useState("");
 
-  React.useEffect(() => {
-    const readOrders = async () => {
-      try {
-        const db = firebase.firestore();
-        const data = await db.collection("orders").get();
-        const arrayData = data.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        console.log(arrayData);
-        setCooking(arrayData);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    readOrders();
-  }, []);
+  // React.useEffect(() => {
+  //   const readOrders = async () => {
+  //     try {
+  //       const db = firebase.firestore();
+  //       const data = await db.collection("orders").get();
+  //       const arrayData = data.docs.map((doc) => ({
+  //         id: doc.id,
+  //         ...doc.data(),
+  //       }));
+  //       console.log(arrayData);
+  //       handleSetCooking(arrayData);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   readOrders();
+  // }, []);
 
   const oki = async (e) => {
     e.preventDefault();
@@ -76,6 +78,24 @@ const ShoppingCart = ({ order, handleDelete }) => {
       console.log("No hay cliente");
       return;
     }
+    try { 
+      const db = firebase.firestore()
+      const newUser = {
+        name: client,
+        fecha: Date.now()
+      }
+      const data = await db.collection('users').add(newUser)
+
+      setClient ([
+        ...client,
+        {...newUser, id: data.id}
+      ])
+      setClient('')
+    }
+    catch (error){
+      console.log(error)
+    }
+
     console.log(client);
   };
 
@@ -126,11 +146,11 @@ const ShoppingCart = ({ order, handleDelete }) => {
         <div className="BtnThree">
           <ButtonSend onClick={() => SendOrder()} />
         </div>
-        <div className="DIVPRUEBA">
+{/*         <div className="DIVPRUEBA">
           {cooking.map((item) => (
             <div key={item.id}> {item.product}</div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
