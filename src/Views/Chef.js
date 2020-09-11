@@ -30,31 +30,27 @@ const setCooking = handleSetCooking
         <Header />
       </div>
       <div className="CardContainer">
-      <div className="CardOrder">
-      <div className="CardLeft">
-        <div className="TableClient"> 
+      {cooking.map((item, index) => (
+          <div key={index} className="CardOrder">
+          <div className="CardLeft">
+            <div className="TableClient"> 
+            </div>
+            <div className="TitleProduct">PRODUCTOS</div>
+            <div className="listadeproductos">
+            {item.product}
+            </div>
+          </div>
+          
+            
         </div>
-        <div className="TitleProduct">PRODUCTOS</div>
-        <div className="DIVPRUEBA">
-          {cooking.map((item, index) => (
-            <ol key={index}>
-            <li className="OutList" >{item.product}</li>
-            </ol>
+
           ))}
-        </div>
       </div>
-      <div className="CardRight">
-        <div className="chefLe">Hora de ingreso: 20:59</div>
-        <div className="btnChef">
-          <button className="prepararChef">PREPARAR</button>
-          <button className="terminarChef">TERMINADO</button>
-        </div>
-        <div className="chefLe">Estado: En preparación</div>
-      </div>
-    </div>
-      </div>
+      
     </div>
   );
 }
 
 export default Food;
+
+
