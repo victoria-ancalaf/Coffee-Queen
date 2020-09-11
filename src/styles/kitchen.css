@@ -82,6 +82,7 @@
   font-size: 25px;
   line-height: 26px;
   color: #260801;
+  text-align: center;
 }
 
 .TitleProduct {
@@ -108,15 +109,28 @@
   margin-top: 10px;
 }
 
-.OutList{
-  list-style:none;
+.OutList {
+  list-style: none;
   font-family: "Roboto", sans-serif;
-font-weight: bold;
-font-size: 22px;
-line-height: 26px;
-display: flex;
-align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
 
-color: #592D1D;
-overflow-y: scroll;
+  color: #592d1d;
+  overflow-y: scroll;
+}
+
+.listadeproductos {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+
+  display: flex;
+  align-items: center;
+
+  color: #592d1d;
 }

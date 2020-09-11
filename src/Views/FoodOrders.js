@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import OrderCheck from "../components/OrderCheck";
+import "../styles/orderCheck.css";
 
 function Waiter() {
   return (
