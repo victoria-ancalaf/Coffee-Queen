@@ -1,0 +1,154 @@
+.chefContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.headerChef {
+  width: 100%;
+}
+
+.CardContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.CardOrder {
+  display: flex;
+  width: 1099px;
+  height: 350px;
+  background: #c7a79b;
+  border-radius: 15px;
+  margin-top: 4%;
+}
+
+.CardLeft {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+  height: auto;
+}
+
+.CardRight {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 55%;
+}
+
+.btnChef {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.prepararChef {
+  width: 248px;
+  height: 101px;
+  background: #bf7c63;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #260801;
+  border-style: none;
+}
+
+.terminarChef {
+  width: 250px;
+  height: 100px;
+  background: #bf7111;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+  color: #ddd0cb;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  border-style: none;
+}
+
+.chefLe {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 26px;
+  color: #260801;
+  text-align: center;
+}
+
+.TitleProduct {
+  width: 400px;
+  height: 61px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  line-height: 52px;
+  color: #ddd0cb;
+  background: #592d1d;
+  margin-top: 10px;
+}
+
+.TableClient {
+  height: 15%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #260801;
+  margin-top: 10px;
+}
+
+.OutList {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+
+  color: #592d1d;
+  
+}
+
+.listadeproductos {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+font-size: 30px;
+    line-height: 47px;
+
+  display: flex;
+  align-items: center;
+  list-style:none;
+overflow-y: scroll;
+  color: #592d1d;
+}
+
+.listList {
+  list-style: outside;
+}
+.StylosDate{
+    background: #c7a79b;
+    font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+font-size: 20px;
+color:#592d1d;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+
+}

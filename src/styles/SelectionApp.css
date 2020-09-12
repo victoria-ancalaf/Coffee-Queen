@@ -1,0 +1,32 @@
+.ContainterSelection {
+	display: flex;
+	background-color: #ddd0cb;
+	position: relative;
+	justify-content: space-evenly;
+	flex-direction: row;
+	align-items: center;
+	height: 100vh;
+}
+.Waiter, .Chef {
+	display: flex;
+    width: 354px;
+	height: 253px;
+	left: 200px;
+	top: 299px;
+	background: #bf7c63;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+	justify-content: center;
+}
+
+.NoWaiter > img, .NoChef > img {
+	width: 208px;
+	height: 220px;
+}
+
+.NoWaiter, .NoChef {
+	background: none;
+	border: none;
+}
+
+

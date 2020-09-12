@@ -1,0 +1,35 @@
+.ContainerMenu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.ContainerMenuBottom {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4.5%;
+  width: 100%;
+  margin-left: 3%;
+  background-color: #f2f2f2;
+}
+
+.ContainerHeader {
+  width: 100%;
+  height: 0%;
+}
+
+.ContainerButtons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: warp;
+  width: 40%;
+}
+
+.ContainerOrder {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}

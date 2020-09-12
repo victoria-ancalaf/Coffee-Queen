@@ -1,25 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./Views/CoffeeQueen";
+import Enter from "./Views/Selection";
+import Food from "./Views/Chef";
+import Waiter from "./Views/FoodOrders";
+import MenuOptions from "./Views/Menu";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  const [cooking, setCooking] = React.useState([]);
+  const handleSetCooking = (cooking) => {
+    setCooking(cooking);
+  };
+
+  const [waiter, setWaiter] = React.useState([]);
+  const handleSetWaiter = (waiter) => {
+    setWaiter(waiter);
+  };
+
+  const [order, setOrder] = React.useState([]);
+  const handleSetOrder = (order) => {
+    setOrder(order);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/FoodOrders">
+          <Waiter waiter={waiter} handleSetWaiter={handleSetWaiter} />
+        </Route>
+        <Route path="/Chef">
+          <Food cooking={cooking} handleSetCooking={handleSetCooking} order={order} handleSetOrder={handleSetOrder} />
+        </Route>
+        <Route path="/Menu">
+          <MenuOptions cooking={cooking} handleSetCooking={handleSetCooking} />
+        </Route>
+        <Route path="/Selection">
+          <Enter />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
