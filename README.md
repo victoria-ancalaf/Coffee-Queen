@@ -108,7 +108,7 @@ Una vez que la orden esté lista para ser entregada al cliente; se debe presiona
 
 ## 6. Enlace 💻
 
-Te invitamos a conocer Coffee Queen[LinkCoffeeQueen](https://coffe-queen.web.app/)
+Te invitamos a conocer Coffee Queen [LinkCoffeeQueen](https://coffe-queen.web.app/)
 
 ### Nota para programadores
 
