@@ -14,7 +14,7 @@
 
 ## 1. Coffee Queen ☕
 
-![logo1.png](https://github.com/victoria-ancalaf/Coffee-Queen/blob/master/src/img/imgReadme/logo1.png)
+![logo1.png](https://github.com/victoria-ancalaf/Coffee-Queen/blob/master/src/img/logo1.png)
 
 **Coffee Queen** es una empresa familiar, donde todo el equipo se esfuerza por ofrecer una amplia variedad de café gourmet, espresso y pasteles. Formados en repostería francesa e inspirados en los sabores asiáticos, Coffee Queen espera traerle lo mejor de ambos mundos.
 
@@ -108,7 +108,7 @@ Una vez que la orden esté lista para ser entregada al cliente; se debe presiona
 
 ## 6. Enlace 💻
 
-Te invitamos a conocer Coffee Queen![LinkCoffeeQueen](https://coffe-queen.web.app/)
+Te invitamos a conocer Coffee Queen[LinkCoffeeQueen](https://coffe-queen.web.app/)
 
 ### Nota para programadores
 
