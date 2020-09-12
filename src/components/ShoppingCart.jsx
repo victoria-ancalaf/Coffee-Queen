@@ -38,7 +38,6 @@ const ShoppingCart = ({ order, handleDelete }) => {
     console.log(clientOrder);
     const dateOrder = new Date();
     db.collection("orders")
-
       .add({
         product: clientOrder,
         date: dateOrder.toLocaleString(),
@@ -56,24 +55,7 @@ const ShoppingCart = ({ order, handleDelete }) => {
 
   const [client, setClient] = React.useState("");
 
-  // React.useEffect(() => {
-  //   const readOrders = async () => {
-  //     try {
-  //       const db = firebase.firestore();
-  //       const data = await db.collection("orders").get();
-  //       const arrayData = data.docs.map((doc) => ({
-  //         id: doc.id,
-  //         ...doc.data(),
-  //       }));
-  //       console.log(arrayData);
-  //       handleSetCooking(arrayData);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   readOrders();
-  // }, []);
-
+ 
   const oki = async (e) => {
     e.preventDefault();
 
@@ -145,11 +127,6 @@ const ShoppingCart = ({ order, handleDelete }) => {
         <div className="BtnThree">
           <ButtonSend onClick={() => SendOrder()} />
         </div>
-        {/*         <div className="DIVPRUEBA">
-          {cooking.map((item) => (
-            <div key={item.id}> {item.product}</div>
-          ))}
-        </div> */}
       </div>
     </div>
   );
