@@ -11,7 +11,7 @@ import check from "../img/check.png";
 const db = firebase.firestore();
 //console.log(db);
 
-const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
+const ShoppingCart = ({ order, handleDelete }) => {
   //Eliminar items
   function deleteCart(id) {
     console.log(id);
@@ -38,7 +38,6 @@ const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
     console.log(clientOrder);
     const dateOrder = new Date();
     db.collection("orders")
-
       .add({
         product: clientOrder,
         date: dateOrder.toLocaleString(),
@@ -46,32 +45,17 @@ const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
       })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
+        deleteOrder()
       })
       .catch(function (error) {
         console.error("Error adding document: ", error);
       });
   };
+  
 
   const [client, setClient] = React.useState("");
 
-  // React.useEffect(() => {
-  //   const readOrders = async () => {
-  //     try {
-  //       const db = firebase.firestore();
-  //       const data = await db.collection("orders").get();
-  //       const arrayData = data.docs.map((doc) => ({
-  //         id: doc.id,
-  //         ...doc.data(),
-  //       }));
-  //       console.log(arrayData);
-  //       handleSetCooking(arrayData);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   readOrders();
-  // }, []);
-
+ 
   const oki = async (e) => {
     e.preventDefault();
 
@@ -143,11 +127,6 @@ const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
         <div className="BtnThree">
           <ButtonSend onClick={() => SendOrder()} />
         </div>
-        {/*         <div className="DIVPRUEBA">
-          {cooking.map((item) => (
-            <div key={item.id}> {item.product}</div>
-          ))}
-        </div> */}
       </div>
     </div>
   );

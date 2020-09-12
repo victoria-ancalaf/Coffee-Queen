@@ -119,18 +119,36 @@
   align-items: center;
 
   color: #592d1d;
-  overflow-y: scroll;
+  
 }
 
 .listadeproductos {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 22px;
-  line-height: 26px;
+font-size: 30px;
+    line-height: 47px;
 
   display: flex;
   align-items: center;
-
+  list-style:none;
+overflow-y: scroll;
   color: #592d1d;
+}
+
+.listList {
+  list-style: outside;
+}
+.StylosDate{
+    background: #c7a79b;
+    font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+font-size: 20px;
+color:#592d1d;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+
 }

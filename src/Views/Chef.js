@@ -25,10 +25,44 @@ function Food({ cooking, handleSetCooking }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const sendWaiter = (id) => {
+    const waiterOrder = cooking.filter(item => item.id === id);
+    const db = firebase.firestore();
+    console.log(waiterOrder);
+    const dateOrder = new Date();
+    db.collection("waiter")
+      .add({
+        productWaiter: waiterOrder,
+        date: dateOrder.toLocaleString(),
+        status: "Entregar a cliente",
+      })
+      .then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
+  };
+  
+  const deleteNewOrder = async (id) => {
+    try {
+      const db = firebase.firestore()
+      await db.collection("orders").doc(id).delete()
+
+      const arrayFilter = cooking.filter(item => item.id !== id)
+      setCooking(arrayFilter)
+      sendWaiter(id)
+    } catch (error) {
+
+      console.log(error)
+    }
+  }
+
+
   return (
     <div className="chefContainer">
       <div className="headerChef">
-        <Header />
+        <Header tipo={"cocina"}/>
       </div>
       <div className="CardContainer">
         {cooking.map((item, index) => (
@@ -36,12 +70,16 @@ function Food({ cooking, handleSetCooking }) {
             <div className="CardLeft">
               <div className="TableClient"></div>
               <div className="TitleProduct">PRODUCTOS</div>
-              <div className="listadeproductos">{item.product}</div>
+              <div className="listadeproductos">
+                <ol className="listList">
+                  {item.product.map((food, ch) => (<li key={index + food + ch}>{food}</li>))}
+                  </ol>
+                </div>
             </div>
             <div className="CardRight">
               <div className="chefLe">{item.date}</div>
               <div className="btnChef">
-                <button className="terminarChef">TERMINADO</button>
+                <button onClick={() => deleteNewOrder(item.id)} className="terminarChef">TERMINADO</button>
               </div>
               <div className="chefLe">{item.status}</div>
             </div>

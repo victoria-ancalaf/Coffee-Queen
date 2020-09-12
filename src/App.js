@@ -13,14 +13,24 @@ function App() {
     setCooking(cooking);
   };
 
+  const [waiter, setWaiter] = React.useState([]);
+  const handleSetWaiter = (waiter) => {
+    setWaiter(waiter);
+  };
+
+  const [order, setOrder] = React.useState([]);
+  const handleSetOrder = (order) => {
+    setOrder(order);
+  };
+
   return (
     <Router>
       <Switch>
         <Route path="/FoodOrders">
-          <Waiter />
+          <Waiter waiter={waiter} handleSetWaiter={handleSetWaiter} />
         </Route>
         <Route path="/Chef">
-          <Food cooking={cooking} handleSetCooking={handleSetCooking} />
+          <Food cooking={cooking} handleSetCooking={handleSetCooking} order={order} handleSetOrder={handleSetOrder} />
         </Route>
         <Route path="/Menu">
           <MenuOptions cooking={cooking} handleSetCooking={handleSetCooking} />
