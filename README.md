@@ -2,7 +2,7 @@
 
 ## Índice
 
-- [1. Coffee Queen](#1-coffee-queen)
+- [1. Coffee Queen](##1-coffee-queen)
 - [2. Historias de Usuario](#2-historias-de-usuario)
 - [3. Proceso y decisiones de Diseño](#3-proceso-de-decisiones-y-diseño)
 - [4. ¿Cómo Utilizar la plataforma?](#4-¿cómo-utilizar-la-plataforma?)
