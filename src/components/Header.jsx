@@ -2,10 +2,12 @@ import React from "react";
 import "../styles/Header.css";
 import Cup from "../img/logo2.png";
 import BWaiter from "../img/mesera.png";
+import BCocina from "../img/cocina.png"
 import Clock from "./Clock";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
+  const esCocina = props.tipo
   return (
     <div className="HeaderQueen">
       <Link to="/Selection">
@@ -14,7 +16,10 @@ const Header = () => {
         </div>
       </Link>
       <div className="WaiterLogo">
-        <img src={BWaiter} alt="Mesero" />
+        {esCocina && esCocina === "cocina" ? (
+         <img src={BCocina} alt="Cocina" />
+        ) : (<img src={BWaiter} alt="Mesero" />)}
+        
         <Clock />
       </div>
     </div>

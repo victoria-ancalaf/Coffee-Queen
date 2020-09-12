@@ -11,7 +11,7 @@ import check from "../img/check.png";
 const db = firebase.firestore();
 //console.log(db);
 
-const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
+const ShoppingCart = ({ order, handleDelete }) => {
   //Eliminar items
   function deleteCart(id) {
     console.log(id);
@@ -46,11 +46,13 @@ const ShoppingCart = ({ order, handleDelete, handleSetCooking }) => {
       })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
+        deleteOrder()
       })
       .catch(function (error) {
         console.error("Error adding document: ", error);
       });
   };
+  
 
   const [client, setClient] = React.useState("");
 

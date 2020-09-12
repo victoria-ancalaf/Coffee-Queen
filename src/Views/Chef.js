@@ -28,7 +28,7 @@ function Food({ cooking, handleSetCooking }) {
   return (
     <div className="chefContainer">
       <div className="headerChef">
-        <Header />
+        <Header tipo={"cocina"}/>
       </div>
       <div className="CardContainer">
         {cooking.map((item, index) => (
@@ -36,7 +36,7 @@ function Food({ cooking, handleSetCooking }) {
             <div className="CardLeft">
               <div className="TableClient"></div>
               <div className="TitleProduct">PRODUCTOS</div>
-              <div className="listadeproductos">{item.product}</div>
+              <div className="listadeproductos"><ol>{item.product.map((food, ch) => (<li key={index + food + ch}>{food}</li>))}</ol></div>
             </div>
             <div className="CardRight">
               <div className="chefLe">{item.date}</div>
