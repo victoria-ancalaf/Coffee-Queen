@@ -7,9 +7,11 @@ import ShoppingCart from "../components/ShoppingCart";
 function MenuOptions(props) {
   const {cooking, handleSetCooking} = props;
   const [order, setOrder] = useState([]);
+
   const handleSetOrder = (order) => {
     setOrder(order);
   };
+  
   const handleDelete = (order) => {
     setOrder(order);
   };

@@ -11,11 +11,9 @@ const Products = (props) => {
 
   //Estado del pedido
   const [options, setOptions] = useState(MenuBebidas);
-  // const [quantity, setquantity] = useState(1);
-
+  
   const addCart = (menu) => {
     console.log(menu);
-    //Revisar NewOrder y ver si el item existe, y si existe añadirle 1 al quantity
     const newOrder = [
       ...order,
       {

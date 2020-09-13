@@ -30,11 +30,13 @@ function Food({ cooking, handleSetCooking }) {
     const db = firebase.firestore();
     console.log(waiterOrder);
     const dateOrder = new Date();
+    const client =  cooking.filter(item => item.name === id);
     db.collection("waiter")
       .add({
         productWaiter: waiterOrder,
         date: dateOrder.toLocaleString(),
         status: "Entregar a cliente",
+        nameClient: client,
       })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -68,7 +70,9 @@ function Food({ cooking, handleSetCooking }) {
         {cooking.map((item, index) => (
           <div key={index} className="CardOrder">
             <div className="CardLeft">
-              <div className="TableClient"></div>
+              <div className="TableClient">
+                Nombre cliente: {item.nameClient}
+              </div>
               <div className="TitleProduct">PRODUCTOS</div>
               <div className="listadeproductos">
                 <ol className="listList">

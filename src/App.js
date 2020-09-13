@@ -18,10 +18,7 @@ function App() {
     setWaiter(waiter);
   };
 
-  const [order, setOrder] = React.useState([]);
-  const handleSetOrder = (order) => {
-    setOrder(order);
-  };
+  
 
   return (
     <Router>
@@ -30,7 +27,7 @@ function App() {
           <Waiter waiter={waiter} handleSetWaiter={handleSetWaiter} />
         </Route>
         <Route path="/Chef">
-          <Food cooking={cooking} handleSetCooking={handleSetCooking} order={order} handleSetOrder={handleSetOrder} />
+          <Food cooking={cooking} handleSetCooking={handleSetCooking} />
         </Route>
         <Route path="/Menu">
           <MenuOptions cooking={cooking} handleSetCooking={handleSetCooking} />
