@@ -128,7 +128,6 @@
   font-weight: bold;
 font-size: 30px;
     line-height: 47px;
-
   display: flex;
   align-items: center;
   list-style:none;
@@ -149,6 +148,60 @@ color:#592d1d;
     align-items: center;
     display: flex;
     justify-content: center;
+}
 
+ /* iPad */
+@media only screen and (min-width: 768px) and (orientation : landscape) {
 
+  .CardOrder {
+  max-width: 90%;
+  }
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 1400px) {
+
+  .CardContainer {
+    margin-top: 0;
+  }
+
+  .CardOrder {
+    max-width: 765px;
+    max-height: 281px;
+    margin-top: 2%;
+  }
+
+  .TableClient {
+    font-size: 20px;
+  }
+
+  .TitleProduct {
+    width: 300px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 31px;
+  }
+
+  .listList {
+    font-size: 22px;
+  }
+
+  .chefLe {
+    font-size: 18px;
+  }
+
+  .terminarChef {
+    width: 213px;
+    height: 97px;
+    font-size: 25px;
+  }
+
+  .listadeproductos {
+    width: 87%;
+  }
+
+  ::-webkit-scrollbar {
+    background: none;
+  }
 }

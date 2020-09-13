@@ -40,3 +40,22 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
+
+/* Desktop */
+@media only screen and (min-width: 1400px) {
+
+  .optionsButtons {
+    margin: 3%;
+    width: 153px;
+    height: 68px;
+    font-size: 17px;
+  }
+
+  .btnDrinks, .Cake {
+    width: 153px;
+    height: 68px;
+    font-size: 20px;
+  }
+
+}

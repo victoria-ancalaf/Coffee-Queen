@@ -37,11 +37,14 @@ const ShoppingCart = ({ order, handleDelete }) => {
     const clientOrder = order.map((item) => item.name);
     console.log(clientOrder);
     const dateOrder = new Date();
+    const newUser = client;
+    
     db.collection("orders")
       .add({
         product: clientOrder,
         date: dateOrder.toLocaleString(),
         status: "En espera",
+        nameClient: newUser
       })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -67,7 +70,6 @@ const ShoppingCart = ({ order, handleDelete }) => {
       const db = firebase.firestore();
       const newUser = {
         name: client,
-        fecha: Date.now(),
       };
       const data = await db.collection("users").add(newUser);
 

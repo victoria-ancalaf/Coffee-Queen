@@ -7,7 +7,9 @@ function Home() {
   return (
     <div className="containerHome">
       <Logo />
+      <div className="btnDesktop">
       <Events />
+      </div>
     </div>
   );
 }

@@ -33,3 +33,45 @@
   justify-content: center;
   width: 60%;
 }
+
+/* iPad */
+@media screen and (min-width: 768px) and (orientation : landscape) {
+  
+  .ContainerMenuBottom {
+    margin-top: 11.5%;
+    margin-left: 1%;
+  }
+
+  .containerCart {
+    max-width: 90%;
+    max-height: 93%;
+  }
+
+  .StylesTitle {
+    max-width: 100%;
+  }
+
+  .ContainerBtnCart {
+    max-height: 20%;
+  }
+
+  .ListProducts{
+    max-height: 40%
+  }
+
+}
+  
+/* Desktop */
+@media screen and (min-width: 1400px) {
+
+  .ContainerMenuBottom {
+    max-height: 80%;
+    margin-top: 4%;
+  }
+  
+  .containerCart {
+    max-height: 100%;
+    max-width: 70%;
+  }
+
+}
