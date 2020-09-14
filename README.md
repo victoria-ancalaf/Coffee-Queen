@@ -100,6 +100,8 @@ Una vez que la orden esté lista para ser entregada al cliente; se debe presiona
 
 ## 7. Auditoría Lighthouse 🔩
 
+![lighthouse.png](https://github.com/victoria-ancalaf/Coffee-Queen/blob/master/src/img/imgReadme/lighthouse.PNG)
+
 ## 5. Autoras ❤️
 
 - **Victoria Ancalaf** - [victoria-ancalaf](https://github.com/victoria-ancalaf)
