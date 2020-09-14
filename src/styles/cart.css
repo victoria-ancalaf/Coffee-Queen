@@ -189,3 +189,47 @@ option {
 .boton {
   width: 51px;
 }
+
+
+/* Desktop */
+@media only screen and (min-width: 1400px) {
+  
+  p {
+    font-size: 15px;
+  }
+
+  .form {
+    height: 90%;
+    padding-top: 1%;
+  }
+
+  .Tables {
+    height: 10%;
+  }
+
+  .client {
+    font-size: 15px;
+  }
+
+  .button-form > img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .BtnSend {
+    width: 150px;
+    height: 80px;
+    font-size: 17px;
+  }
+
+  .BtnCancel {
+    width: 160px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .Hola {
+    font-size: 19px;
+  }
+
+}

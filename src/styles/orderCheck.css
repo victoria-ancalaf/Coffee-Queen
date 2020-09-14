@@ -10,7 +10,7 @@
 
 .OrderCheck {
   width: 384px;
-     height: 175px;
+  height: 175px;
   font-size: 30px;
   text-align: center;
   color: #592d1d;
@@ -40,7 +40,7 @@
   line-height: 23px;
   color: #ddd0cb;
   background: #592d1d;
-      line-height: 41px;
+  line-height: 41px;
 }
 
 .button-check > img {
@@ -74,8 +74,8 @@
 }
 
 .btnReady {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
   background-color: #c7a79b;
   display: flex;
   align-items: center;
@@ -84,4 +84,27 @@ justify-content: center;
 
 .listList {
   font-family: "Roboto", sans-serif;
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 1400px) {
+
+  .checkBottom {
+    padding-top: 2%;
+  }
+
+  .containerOrderCheck, .OrderCheck, .EndOrder {
+    width: 300px;
+    font-size: 19px;
+  }
+
+  .tableWaiter, li {
+    font-size: 20px;
+  }
+
+  .StylosDate {
+    font-size: 15px;
+  }
+
 }

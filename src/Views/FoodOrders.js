@@ -47,18 +47,21 @@ function Waiter({ waiter, handleSetWaiter}) {
       </div>
       <div className="checkBottom">
 
-      {waiter.map((item, lala) => (
-        <div key={lala} className="containerOrderCheck">
+      {waiter.map((item, ord) => (
+        <div key={ord} className="containerOrderCheck">
         <div className="tableWaiter">
-          {item.status}
+      Nombre cliente: {item.productWaiter.map(customer => customer.nameClient)}
         </div>
         <div className="EndOrder"> PRODUCTOS</div>
         <div className="OrderCheck">
             <ol className="listList">
-            {item.productWaiter.map(wait => wait.product.map((waiter, food) => (<li key={lala + waiter + food}>{waiter}</li>)))}
+            {item.productWaiter.map(wait => wait.product.map((waiter, food) => (<li key={ord + waiter + food}>{waiter}</li>)))}
            </ol>
       </div>
       <div className="StylosDate">{item.date}</div>
+      <div className="tableWaiter">
+          {item.status}
+        </div>
           <div className="btnReady">
               <button onClick={() => deleteReadyOrder(item.id)} className="button-check" type="submit">
                 <img src={checkWaiter} alt="Check" />
