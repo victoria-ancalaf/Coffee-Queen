@@ -3,14 +3,14 @@
 ## Índice
 
 * [1. Coffee Queen](#1-coffee-queen-)
-* [2. Historias de Usuario](#2-historias-de-usuario)
-* [3. Proceso y decisiones de Diseño](#3-proceso-de-decisiones-y-diseño)
-* [4. ¿Cómo Utilizar la plataforma?](#4-¿cómo-utilizar-la-plataforma?)
-* [6. Testeos](#6-testeos)
-* [7. Auditoría Lighthouse](#7-auditoría-lighthouse)
-* [5. Desarrolladoras](#5-desarrolladoras)
-* [8. Enlace](#8-enlace)
-* [9. Checklist](#9-checklist)
+* [2. Historias de Usuario](#2-historias-de-usuario-)
+* [3. Proceso y decisiones de Diseño](#3-proceso-de-decisiones-y-diseño-)
+* [4. ¿Cómo Utilizar la plataforma?](#4-¿como-utilizar-la-plataforma?-)
+* [6. Testeos](#6-testeos-)
+* [7. Auditoría Lighthouse](#7-auditoria-lighthouse-)
+* [5. Desarrolladoras](#5-desarrolladoras-)
+* [8. Enlace](#8-enlace-)
+* [9. Checklist](#9-checklist-)
 
 ## 1. Coffee Queen ☕
 
