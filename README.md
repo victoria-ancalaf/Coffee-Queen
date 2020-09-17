@@ -2,15 +2,15 @@
 
 ## Índice
 
-- [1. Coffee Queen](#1-coffee-queen)
-- [2. Historias de Usuario](#2-historias-de-usuario)
-- [3. Proceso y decisiones de Diseño](#3-proceso-de-decisiones-y-diseño)
-- [4. ¿Cómo Utilizar la plataforma?](#4-¿cómo-utilizar-la-plataforma?)
-- [6. Testeos](#6-testeos)
-- [7. Auditoría Lighthouse](#7-auditoría-lighthouse)
-- [5. Desarrolladoras](#5-desarrolladoras)
-- [8. Enlace](#8-enlace)
-- [9. Checklist](#9-checklist)
+* [1. Coffee Queen](#1-coffee-queen-)
+* [2. Historias de Usuario](#2-historias-de-usuario-)
+* [3. Proceso y decisiones de Diseño](#3-procesos-de-decisiones-de-dise%C3%B1o-)
+* [4. ¿Cómo Utilizar la plataforma?](#4-c%C3%B3mo-utilizar-la-plataforma-)
+* [5. Testeos](#5-testeos-%EF%B8%8F)
+* [6. Auditoría Lighthouse](#6-auditor%C3%ADa-lighthouse-)
+* [7. Desarrolladoras](#7-autoras-%EF%B8%8F)
+* [8. Enlace](#8-enlace-)
+* [9. Checklist](#9-checklist-)
 
 ## 1. Coffee Queen ☕
 
@@ -98,17 +98,17 @@ Una vez que la orden esté lista para ser entregada al cliente; se debe presiona
 
 ## 5. Testeos ⚙️
 
-## 7. Auditoría Lighthouse 🔩
+## 6. Auditoría Lighthouse 🔩
 
 ![lighthouse.png](https://github.com/victoria-ancalaf/Coffee-Queen/blob/master/src/img/imgReadme/lighthouse.PNG)
 
-## 5. Autoras ❤️
+## 7. Autoras ❤️
 
 - **Victoria Ancalaf** - [victoria-ancalaf](https://github.com/victoria-ancalaf)
 - **Pamela Barboza** - [PamelaBarboza](https://github.com/PamelaBarboza)
 - **Jeniffer Genoves** - [JenifferGenoves](https://github.com/JenifferGenoves)
 
-## 6. Enlace 💻
+## 8. Enlace 💻
 
 Te invitamos a conocer Coffee Queen [LinkCoffeeQueen](https://coffe-queen.web.app/)
 
