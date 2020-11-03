@@ -93,6 +93,7 @@ const ShoppingCart = ({ order, handleDelete }) => {
             name="cliente"
             onChange={(e) => setClient(e.target.value)}
             value={client}
+            required
           />
           <div className="boton">
             <button className="button-form" type="submit">
